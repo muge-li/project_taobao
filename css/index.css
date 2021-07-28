@@ -1,0 +1,1273 @@
+@import "reset.css";
+
+@font-face {
+    font-family: 'iconfont';
+    src: url('../font/iconfont.eot');
+    src: url('../font/iconfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/iconfont.woff2') format('woff2'),
+         url('../font/iconfont.woff') format('woff'),
+         url('../font/iconfont.ttf') format('truetype'),
+         url('../font/iconfont.svg#iconfont') format('svg');
+  }
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 头部信息 */
+.headMessage{
+    height: 35px;
+    background-color:rgb(245, 245, 245);
+    color: #3c3c3c;
+    line-height: 35px;
+    font-size: 12px;
+    padding: 0px 6px;
+    font-family: tahoma, arial, "Hiragino Sans GB", 宋体, sans-serif;
+    border: 1px solid #EEE;
+}
+
+.headMessage p{
+    float: left;
+    margin-right: 5px;
+}
+
+.headMessage .arrow{
+    transform: scale(0.3);
+    display: block;
+    float: left;
+    font-weight: bold;
+    color: #9c9c9c;
+}
+
+.headMessage a{
+    display: block;
+    float: left;
+}
+
+.headMessage .star{
+    font-size: 12px;
+    color: #9c9c9c ;
+}
+
+.headMessage div.shou:hover .star{
+    color: #f22e00;
+}
+
+.headMessage div{
+    padding: 0px 6px;
+}
+
+.headMessage div .search{
+    transform: scale(.5);
+    font-weight: bold;
+}
+
+.headMessage div .shu{
+    padding: 0px 5px;
+    float: left;
+    color: #ddd;
+}
+
+.headMessage div .lm{
+    margin-right: 7px;
+}
+
+.headMessage .login{
+    color:#f22e00 ;
+    margin-right:5px ;
+}
+
+.headMessage div a:hover{
+    color:#f22e00 ;
+    cursor: pointer;
+}
+
+.headMessage strong{
+    float: left;
+}
+
+.headMessage div.subM{
+    position: relative;
+    z-index: 999;
+}
+
+.headMessage div.subM:hover{
+    background-color: #FFF;
+    box-sizing: border-box;
+    border: 1px solid #EEE;
+    border-bottom: none;
+    line-height: 33px;
+}
+
+.headMessage div.subM:hover>.subMaue{
+    background-color: #FFF;
+    display: block;
+    border: 1px solid #EEE;
+    border-top: none;
+    left: -1px;
+}
+
+.headMessage div .subMaue{
+    position: absolute;
+    top: 33px;
+    left: 0px;
+    display: none;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.headMessage div .subMaue .button{
+    border: none;
+    background-color: #f40;
+    color: #fff;
+    padding: 5px 8px;
+    margin-top: 4px;
+    font-size: 12px;
+    border-radius: 2px;
+}
+
+.headMessage div .subMaue>ul>li{
+	padding:0px 5px ;
+    cursor: pointer;
+}
+
+.headMessage div.subM:hover>div{
+    background-color: #FFF;
+    display: block;
+    box-sizing: border-box;
+    
+}
+
+.headMessage div.subM:hover>div>ul>li:hover{
+    background-color: #f4f4f4;
+    box-sizing: border-box;
+}
+
+.headMessage div .submaue{
+    position: absolute;
+    height: 250px;
+    top: 33px;
+    overflow-y:scroll;
+}
+
+.headMessage div .submaue ul>li{
+    width: 242px;
+    height: 29px;
+}
+
+.headMessage div .submaueS{
+    position: absolute;
+    top: 33px;
+    left: 0px;
+    width: 80px;
+    padding: 0px;
+    display: none;
+}
+
+.headMessage div .submaueS>ul>li{
+    width: 72px;
+}
+
+/* 搜索框 */
+
+.headSearch {
+    background-color: #fff;
+    height: 97px;
+    padding-top: 24px;
+}
+
+.headSearch .layer .left img{
+    height: 75px;
+    width: 157px;
+    margin-left: 22px;
+}
+
+.headSearch .layer .main{
+    margin-left: 258px;
+    margin-right: 302px;
+}
+
+.headSearch .layer .main .top{
+    height: 22px;
+}
+
+.headSearch .layer .main .top>ul>li{
+    float: left;
+    color: #F40;
+    width: 36px;
+    height: 22px;
+    line-height: 22px;
+    text-align: center;
+    cursor: pointer;
+    margin-right: 4px;
+}
+
+.headSearch .layer .main .top>ul>li:hover{
+    background-color: #FFEEE5;
+    color: #FF5400;
+}
+
+.headSearch .layer .main .top>ul>li.checked{
+    background-image: linear-gradient(to right,#ff9000,#ff5000);
+    color: #fff;
+    font-weight: bold;
+    box-sizing: border-box;
+    border: 1px solid #ff5400;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    margin-left: 17px;
+}
+
+.headSearch .layer .main .inputs,.headSearch .layer .main .bottom{
+    width: 628px;
+    height: 40px;
+    position: relative;
+}
+
+.headSearch .layer .main .inputs .first{
+    width: 554px;
+    height: 36px;
+    border: 2px solid #ff5000;
+    border-right: none;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    position: relative;
+}
+
+.headSearch .layer .main .inputs .first input[type=text]{
+    width: 472px;
+    height: 24px;
+    padding: 6px 0px;
+    margin-left: 32px;
+    font-size: 12px;
+}
+
+.headSearch .layer .main .inputs .first input::-webkit-input-placeholder{
+    color: #aaafaa;
+}
+
+
+.headSearch .layer .main .inputs .first .search{
+    font-size: 17px;
+    color: #666;
+    position: absolute;
+    top: 7px;
+    left: 9px;
+}
+
+.headSearch .layer .main .inputs .first .picture{
+    font-size: 25px;
+    position: absolute;
+    right: 14px;
+    cursor: pointer;
+}
+
+.headSearch .layer .main .inputs button{
+    background-image: linear-gradient(to right,#ff9000,#ff5000);
+    color: #fff;
+    width: 74px;
+    height: 40px;
+    cursor: pointer;
+    font-size: 18px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+.headSearch .layer .main .bottom{
+    padding-top:5px ;
+    padding-right: 41px;
+    cursor: pointer;
+}
+
+.headSearch .layer .main .bottom ul>li{
+    float: left;
+    padding-right: 5px;
+    color: #3c3c3c;
+    cursor: pointer;
+}
+
+.headSearch .layer .main .bottom ul>li:hover{
+    color: #f40;
+}
+
+.headSearch .layer .main .bottom ul>li.check{
+    color: #f40;
+}
+
+.headSearch .layer .right{
+    height: 90px;
+    width: 76px;
+    color: #f40;
+    position: relative;
+}
+
+.headSearch .layer .right .wrong{
+    color: #ddd;
+    transform: scale(.5);
+    padding: 0px 4px;
+    width: 17px;
+    right: 212px;
+    top: -6px;
+    background-color: #FFF;
+}
+
+.headSearch .layer .right .Qr .QRcode{
+    font-size: 66px;
+}
+
+.headSearch .layer .right .Qr span{
+    position: absolute;
+    right: 9px;
+}
+
+.headSearch .layer .right .Qr,.headSearch .layer .right .wrong{
+    border: 1px solid rgb(238, 238, 238);
+    cursor: pointer;
+    position: absolute;
+}
+
+.headSearch .layer .right .Qr{
+    left: -144px;
+    background-color: #fff;
+    height: 85px;
+}
+
+.headSearch .layer .right .wrong:hover i{
+    color: #aaafaa;;
+}
+
+/* 首页选择部分 */
+.container .firstScreen .chose{
+    background-image: linear-gradient(to right,#ff9000,#ff5000);
+    padding: 0px 118px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.container .firstScreen .chose span{
+    margin-left: 7px;
+}
+
+.container .firstScreen .chose h2{
+    font-size: 16px;
+    width: 190px;
+    background-color: #ff5000;
+}
+
+.container .firstScreen .chose ul.first>li{
+    font-size: 16px;
+}
+
+.container .firstScreen .chose ul>Li{
+    float: left;
+    margin: 0 3px;
+    padding: 0 4px;
+    position: relative;
+}
+/* 给伪元素放上那个图片，以用来做出更好的hover效果 */
+.container .firstScreen .chose ul>Li:hover:before{
+    content: "";
+    position: absolute;
+    background: url(../images/2.png);
+    width: 23px;
+    height: 11px;
+    top: -10px;
+    left: 50%;
+    margin-left: -13px;
+    background-size: contain;
+}
+
+.container .firstScreen .chose ul>Li>a{
+    color: #fff;
+    padding: 0 5px;
+}
+
+.container .firstScreen .main .contain{
+    margin-left: 190px;
+    margin-right: 290px;
+}
+
+.container .firstScreen .main .contain .col{
+    float: left;
+    position: relative;
+    height: 522px;
+}
+
+.container .firstScreen .main .contain .left{
+    width: 190px;
+    margin-left: -100%;
+    left: -190px;
+    font-size: 14px;
+    background-color: #fff;
+    border: 1px solid #ff5000;
+    box-sizing: border-box;
+    border-top: none;
+}
+
+.container .firstScreen .main .contain .left ul{
+    padding: 6px 0 3px 0;
+}
+
+.container .firstScreen .main .contain .left ul>li{
+    padding: 1px 19px 1px 25px;
+    color: #666;;
+    position: relative;
+    height: 34px;
+    line-height: 34px;
+    box-sizing: border-box;
+}
+
+.container .firstScreen .main .contain .left ul>li:hover{
+    background-color: #ffe4dc;
+    color: #ff5000;
+    transition: background-color .5s;
+}
+
+.container .firstScreen .main .contain .left ul>li:hover a{
+    color: #ff5000;
+}
+
+.container .firstScreen .main .contain .left ul>li a:hover{
+    text-decoration: underline;
+}
+
+.container .firstScreen .main .contain .left ul>li>i{
+    position: absolute;
+    right: 8px;
+    font-size: 4px;
+    top: 3px;
+}
+
+.container .firstScreen .main .contain .right{
+    width: 290px;
+    margin-right: -290px;
+}
+.container .firstScreen .main .contain .center{
+    width: 100%;
+}
+
+.container .firstScreen .main .contain .center .top{
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.container .firstScreen .main .contain .center .top .img1{
+    position: relative;
+}
+
+.container .firstScreen .main .contain .center .top .img1 i{
+    position: absolute;
+    top: 120px;
+    color: #fff;
+    height: 30px;
+    line-height: 30px;
+    width: 20px;
+    font-size: 25px;
+    display: block;
+    text-align: center;
+    background-color: rgba(0, 0, 0, .3);
+    display: none;
+    cursor: pointer;
+}
+.container .firstScreen .main .contain .center .top .img1:hover i{
+    display: block;
+}
+
+.container .firstScreen .main .contain .center .top .img1 i:hover{
+    background-color: rgba(0, 0, 0, .5);
+}
+
+.container .firstScreen .main .contain .center .top .img1 .zuo{
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    text-indent: -5px;
+}
+.container .firstScreen .main .contain .center .top .img1 .you{
+    right: 0px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+}
+.container .firstScreen .main .contain .center .top .img1 .dot{
+    position: absolute;
+    top: 257px;
+    left: 225px;
+    border-radius: 10px;
+    background-color: rgba(255, 255,255, .3);
+}
+
+.container .firstScreen .main .contain .center .top .img1 .dot span{
+    width: 8px;
+    height: 0px;
+    margin: 3px;
+    display: block;
+    padding-top: 8px;
+    border-radius: 50%;
+    background-color: #fff;
+    float: left;
+    cursor: pointer;
+}
+
+.container .firstScreen .main .contain .center .top .img1 .dot span.active{
+    background-color: #ff5000;
+}
+
+.container .firstScreen .main .contain .center .bottom .cat{
+    margin-left: 10px;
+    width: 520px;
+}
+
+.container .firstScreen .main .contain .center .bottom .cat .shang{
+    padding-top: 11px;
+}
+.container .firstScreen .main .contain .center .bottom .cat .shang .line{
+    width: 520px;
+    height: 3px;
+    background-color: #ff1648;
+    position: relative;
+    z-index: 99;
+    top: 20px;
+}
+.container .firstScreen .main .contain .center .bottom .cat .shang .line span{
+    background-color: #000;
+    height: 3px;
+    width: 87px;
+    display: inline-block;
+    position: absolute;
+    left: 0px;
+}
+
+.container .firstScreen .main .contain .center .bottom .cat .tianmao{
+    height: 20px;
+    width: 136px;
+    float: left;
+    position: relative;
+    top: 1px;
+}
+
+
+.container .firstScreen .main .contain .center .bottom .cat em{
+    font-style: normal;
+    float: left;
+    position: relative;
+    top: 4px;
+    color: #666;
+    margin-left: 8px;
+}
+.container .firstScreen .main .contain .center .bottom .cat span{
+    float: right;
+    font-weight: bold;
+}
+.container .firstScreen .main .contain .center .bottom .cat span i{
+    color: #ff1648;
+}
+
+.container .firstScreen .main .contain .center .bottom .cat a img{
+    height: 190px;
+    width: 251px;
+}
+.container .firstScreen .main .contain .center .bottom .cat .Img{
+    background-color: #FFF;
+    position: relative;
+    height: 201px;
+    width: 520px;
+}
+
+.container .firstScreen .main .contain .center .bottom .Img i{
+    position: absolute;
+    top: 85px;
+    color: #fff;
+    height: 30px;
+    line-height: 30px;
+    width: 20px;
+    font-size: 25px;
+    display: block;
+    text-align: center;
+    background-color: rgba(0, 0, 0, .3);
+    display: none;
+    cursor: pointer;
+}
+.container .firstScreen .main .contain .center .bottom .Img:hover i{
+    display: block;
+}
+
+.container .firstScreen .main .contain .center .bottom .Img i:hover{
+    background-color: rgba(0, 0, 0, .5);
+}
+
+.container .firstScreen .main .contain .center .bottom .Img .zuo{
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    text-indent: -5px;
+    left: 4px;
+}
+.container .firstScreen .main .contain .center .bottom .Img .you{
+    right: 4px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+}
+
+.container .firstScreen .main .contain .center .bottom .today h5{
+    margin: 0px;
+    padding-top: 6px;
+    font-size: 12px;
+    color: #a1a1a1;
+    line-height: 24px;
+    font-weight: 400px;
+}
+.container .firstScreen .main .contain .right .user {
+    background-image: url(../images/blackground.png);
+    width: 290px;
+    height: 137px;
+    padding: 3px 0 2px;
+    margin-top: 10px;
+    margin-left: 10px;
+    background-size: 290px 145px;
+}
+
+.container .firstScreen .main .contain .right .user .tubiao{
+    border: 3px solid #fff;
+    border-radius: 50%;
+    display: block;
+    overflow: hidden;
+    width: 50px;
+    height: 50px;
+    margin: 0px auto;
+    background-clip: padding-box;
+    margin-bottom: -5px;
+}
+.container .firstScreen .main .contain .right .user .tubioa img{
+    width: 50px;
+    height: 50px;
+    border: 0px;
+
+}
+.container .firstScreen .main .contain .right .user span{
+    display: inline-block;
+    text-align: center;
+    width: 290px;
+    height: 17px;
+    line-height: 17px;
+    margin: 3px 0px;
+}
+
+.container .firstScreen .main .contain .right .user p{
+    text-align: center;
+    width: 290px;
+    height: 17px;
+}
+.container .firstScreen .main .contain .right .user p a{
+    font-size: 12px;
+    display: inline-block;
+    border-radius: 9px;
+    background-color: #ffe4db;
+    color: #ff5000;
+    padding: 0 10px 0 20px;
+}
+.container .firstScreen .main .contain .right .user p a.glod{
+    background: #ffe4db url(https://img.alicdn.com/tfs/TB1tyFSXm_I8KJjy0FoXXaFnVXa-48-1194.png) 0 -572px no-repeat;
+    background-size: 24px 597px;
+}
+
+.container .firstScreen .main .contain .right .user p a.club{
+    background: #ffe4db url(https://img.alicdn.com/tfs/TB1tyFSXm_I8KJjy0FoXXaFnVXa-48-1194.png) 0 -572px no-repeat;
+    background-size: 24px 528px;
+}
+.container .firstScreen .main .contain .right .user .btn{
+    width: 275px;
+    height: 25px;
+    padding:7.5px 0px 7.5px 15px;
+    font-size: 0px;
+    margin-top: 4px;
+}
+.container .firstScreen .main .contain .right .user .btn button{
+    background-image: linear-gradient(to right,#ff5000,#ff6f06);
+    color: #FFF;
+    font-size: 14px;
+    margin-right: 7px;
+    margin-left: 0px;
+    line-height: 25px;
+    border-radius: 4px;
+    width: 75px;
+    cursor: pointer;
+} 
+
+.container .firstScreen .main .contain .right .user .btn button.rea{
+    width: 92px;
+}
+
+.container .firstScreen .main .contain .right .ad img{
+    height: 65px;
+    width: 290px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.container .firstScreen .main .contain .right .mid{
+    margin-left: 10px;
+    width: 290px;
+    height: 70px;
+    padding-top: 7px;
+    background-color: #fff;
+    color: #3c3c3c;
+    font-weight: 700;
+}
+.container .firstScreen .main .contain .right .mid ul{
+    margin-top: 2px;
+    margin-right: -2px;
+    padding: 8px;
+}
+.container .firstScreen .main .contain .right .mid ul>li{
+    height: 20px;
+    width: 32px;
+    margin: 0px 11px;
+    float: left;
+    line-height: 20px;
+    text-align: center;
+}
+.container .firstScreen .main .contain .right .mid ul>li.active{
+    border-bottom: 2px solid #f40;
+    box-sizing: border-box;
+}
+
+.container .firstScreen .main .contain .right .mid div{
+    padding-left: 10px;
+    padding-top: 3px;
+}
+
+.container .firstScreen .main .contain .right .table{
+    width: 290px;
+    height: 154px;
+    margin-left: 10px;
+    background-color: #fff;
+    table-layout: fixed;/* 表示td的宽度的计算方式，fixed为自适应tr的宽，均分tr */
+}
+
+.container .firstScreen .main .contain .right .table td{
+    border: 1px solid #f4f4f4;
+    color: #333;
+    text-align: center;
+}
+.container .firstScreen .main .contain .right .table td:hover p{
+    color: #f40;
+}
+.container .firstScreen .main .contain .right .table td span{
+    display: block;
+    width: 24px;
+    height: 24px;
+    margin: 0 auto;
+    background: url(../images/right2.png);
+    background-size: 24px 597px;
+    padding-bottom: 6px;
+}
+
+.container .firstScreen .main .contain .right .table .item2 span{
+    background-position: 0 -87px;
+}
+.container .firstScreen .main .contain .right .table .item3 span{
+    background-position: 0 -44px;
+}
+.container .firstScreen .main .contain .right .table .item4 span{
+    background-position: 0 -132px;
+}.container .firstScreen .main .contain .right .table .item5 span{
+    background-position: 0 -173px;
+}.container .firstScreen .main .contain .right .table .item6 span{
+    background-position: 0 -220px;
+}.container .firstScreen .main .contain .right .table .item7 span{
+    background-position: 0 -264px;
+}.container .firstScreen .main .contain .right .table .item8 span{
+    background-position: 0 -308px;
+}
+.container .firstScreen .main .contain .right .table td p{
+    line-height: 24px;
+}
+.container .firstScreen .main .contain .right .bottom{
+    margin-left: 10px;
+    height: 76px;
+    width: 100%;
+    background-color: #fff;
+    position: relative;
+}
+
+.container .firstScreen .main .contain .right .bottom h3{
+    padding-left: 14px;
+    font-size: 14px;
+    height: 30px;
+    line-height: 30px;
+}
+.container .firstScreen .main .contain .right .bottom .picture{
+    padding-left: 23px;
+}
+.container .firstScreen .main .contain .right .bottom a>img{
+    width: 32px;
+    height: 32px;
+    margin: 0 18px 8px 0;
+}
+.container .firstScreen .main .contain .right .bottom .more{
+    position: absolute;
+    right: 8px;
+    top: 6px;
+}
+
+/* 有好货和小广告 */
+
+.layer .Hao{
+    height: 358px;
+    background-color: #fff;
+    overflow: hidden;
+    margin-top: 10px;
+}
+.layer .Hao h3,.secondScreen .goodshop .top h3,.secondScreen .live .top h3{
+    height: 24px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    float: left;
+}
+.layer .Hao h3 em,.secondScreen .goodshop .top h3 em,.secondScreen .live .top h3 em{
+    font-style: normal;
+    display: none;
+}
+.layer .Hao h3 img,.secondScreen .goodshop .top h3 img,.secondScreen .live .top h3 img{
+    height: 24px;
+    width: 74px;
+}
+.layer .Hao span,.secondScreen .goodshop .top span,.secondScreen .live .top span{
+    float: left;
+    margin-top: 23px;
+    margin-left: 13px;
+    color: #999;
+}
+
+.layer .Hao ul {
+    padding-left: 21px;
+}
+
+.layer .Hao ul>li{
+    display: inline-block;
+    width: 180px;
+    height: 271px;
+    margin: 0px 11px 17px 0px;
+}
+
+.layer .Hao ul>li img{
+    width: 180px;
+    height: 180px;
+    opacity: .9;
+}
+.layer .Hao ul>li div{
+    background: #4f4f4f;
+}
+.layer .Hao ul>li div:hover img{
+    opacity: .8;
+    transition: opacity .2s;
+}
+.layer .Hao ul>li:hover h4{
+    color: #f40;
+    transition: color .2s;
+}
+.layer .Hao ul>li a h4{
+    margin-top: 5px;
+    font-size: 16px;
+    font-weight: 400;
+    overflow: hidden;
+    height: 28px;
+    line-height: 28px;
+}
+.layer .Hao ul>li a p{
+    line-height: 24px;
+    color: #999;
+    font-size: 14px;
+    height: 24px;
+    overflow: hidden;
+    margin: 0px;
+}
+.layer .Hao ul>li p{
+    color: #35b1ff;
+    margin-top: 12px;
+    font-size: 14px;
+    cursor: pointer;
+}
+.layer .Hao ul>li p i{
+    vertical-align: -3px;
+    color: #35b1ff;
+    font-size: 20px;
+}
+.layer .Hao ul>li a h4,.layer .Hao ul>li a p,.layer .Hao ul>li p{
+    padding-left: 6px;
+    padding-right: 4px;
+}
+
+.layer .Ad{
+    margin: 10px 0px;
+    height: 70px;
+    cursor: pointer;
+}
+/* 每日好店和淘宝直播 */
+.secondScreen .goodshop,.secondScreen .live{
+    width: 590px;
+    height: 540px;
+    background-color: #fff;
+}
+.secondScreen .goodshop .item,.secondScreen .live .item{
+    height: 222px;
+    width: 271px;
+    padding: 6px 0px 20px 0px;
+    margin-left: 8px;
+}
+.secondScreen .goodshop .item:hover,.secondScreen .live .item:hover .title {
+    color: #f40;
+}
+.secondScreen .live .item .subtitle{
+    color: #999;
+    font-size: 12px;
+    margin-left: 6px;
+}
+.secondScreen .goodshop .item h4,.secondScreen .live .item h4{
+    font-weight: normal;
+    font-size: 16px;
+    vertical-align: top;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.secondScreen .goodshop .item .left,.secondScreen .live .item .left{
+    background-color: #4f4f4f;
+    position: relative;
+}
+
+.secondScreen .live .item .left span{
+    position: absolute;
+    background-color: transparent;
+    height: 42px;
+    font-size: 15px;
+    bottom: -12px;
+    color: #fff;
+    cursor: pointer;
+}
+.secondScreen .live .item .left span p{
+    background-color: #ff2658;
+    height: 12px;
+    line-height: 12px;
+    font-size: 12px;
+    display: inline-block;
+    transform: scale(.8);
+    color: #fff;
+    border-radius: 6px;
+    padding-left: 3px;
+}
+
+.secondScreen .goodshop .item .left img,.secondScreen .live .item .left img{
+    width: 180px;
+    height: 180px;
+    display: block;
+    opacity: .9;
+    cursor: pointer;
+}
+.secondScreen .goodshop .item .left img:hover,.secondScreen .goodshop .item .right img:hover,.secondScreen .live .item .left img:hover,.secondScreen .live .item .right img:hover{
+    opacity: .8;
+    transition: opacity .2s;
+}
+.secondScreen .goodshop .item .right,.secondScreen .live .item .right{
+    width: 89px;
+    height: 180px;
+}
+.secondScreen .goodshop .item .right .IMG,.secondScreen .live .item .right .IMG{
+    background-color: #4f4f4f;
+}
+.secondScreen .goodshop .item .right img,.secondScreen .live .item .right img{
+    width: 89px;
+    height: 89px;
+    margin-bottom: 2px;
+    opacity: .9;
+    display: block;
+    cursor: pointer;
+}
+
+/* 固定定位 */
+.container .aside{
+    width: 50px;
+    height: 350px;
+    position: fixed;
+
+    top: 60px;
+    right: 55px;
+}
+.container .aside .iconfont{
+    position: absolute;
+    color: #ff7f13;
+    top: -37px;
+    font-weight: 700;
+    font-size: 47px;
+    z-index: -1;
+}
+.container .aside ul{
+    background-color: #fff;
+    z-index: 999;
+    border-radius: 8px;
+}
+.container .aside ul>li{
+    text-align: center;
+    height: 50px;
+    font-size: 12px;
+    padding: 10px 8px 0 8px;
+    line-height: 17px;
+    box-sizing: border-box;
+    background-clip: padding-box;
+    line-height: 17px;
+}
+.container .aside ul>li.col{
+    font-size: 13px;
+}
+.container .aside ul>li.last{
+    border-bottom-left-radius:8px ;
+    border-bottom-right-radius: 8px;
+}
+.container .aside ul>li.last a{
+    border-bottom: none;
+}
+.container .aside ul>li.first{
+    border-top-left-radius:8px ;
+    border-top-right-radius: 8px;
+    background-image:linear-gradient(125deg,#ff971b,#ff5000);
+}
+.container .aside ul>li.first a{
+    font-weight: 700;
+    color: #fff;
+}
+.container .aside ul>li.first a::after{
+    border: none;
+}
+.container .aside ul>li.second a{
+    color: #f05;
+}
+.container .aside ul>li.third a{
+    color: #ABC001;
+}
+.container .aside ul>li.forth a{
+    color: #f40;
+}
+.container .aside ul>li.fankui{
+    line-height: 30px;
+}
+.container .aside ul>li:hover a{
+    color: #fff;
+    font-weight: 700;
+    transition: all .2s;
+}
+.container .aside ul>li:hover a::after{
+    border: none;
+}
+.container .aside ul>li a {
+    position: relative;
+}
+.container .aside ul>li.fankui a::after{
+    bottom: -17px;
+}
+.container .aside ul>li a::after{
+    content: "";
+    border-bottom: 1px solid #efefef;
+    width: 34px;
+    position: absolute;
+    right: -5px;
+    bottom: -8px;
+}
+
+.container .aside ul>li a p{
+    position: relative;
+    top: 4px;
+}
+.container .aside ul>li:hover{
+    background-image:linear-gradient(125deg,#ff971b,#ff5000);
+    transition: all .2s;
+}
+/* END */
+.END .End{
+    height: 50px;
+    font-size: 18px;
+    color: #ccccd0;
+    text-align: center;
+    line-height: 50px;
+}
+.END .End span{
+    position: relative;
+}
+.END .End span::after,.END .End span::before{
+    content: "";
+    height: 0px;
+    border-top: 1px solid #e6e6e6;
+    width: 60px;
+    display: block;
+    position: absolute;
+    top: 50%;
+}
+.END .End span::before{
+    left: -70px;
+}
+.END .End span::after{
+    right: -70px;
+}
+.END .bottom{
+    padding-top: 40px;
+    height: 140px;
+}
+.END .bottom .normal{
+    padding: 0px 25px;
+    width: 246.5px;
+}
+.END .bottom .normal span{
+    font-size: 16px;
+    font-weight: bold;
+    color: #3c3c3c;
+    display: block;
+    margin-bottom: 5px;
+}
+.END .bottom .normal span img{
+    height: 40px;
+    width: 40px;
+    vertical-align: middle;
+    margin-right: 6px;
+}
+.END .bottom .normal .tips a{
+    margin-right: 10px;
+    color: #999;
+    font-size: 12px;
+    line-height: 21px;
+    word-spacing: normal;
+}
+.END .bottom .normal .tips a:hover{
+    color: #f40;
+}
+/* foot */
+.foot{
+    background-color: #fff;
+    color: #6c6c6c;
+    height: 292px;
+    padding: 0px 118px;
+}
+.foot .top{
+    padding-top: 7px;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    height: 63px;
+}
+.foot .top ul>li{
+    display: inline-block;
+}
+
+.foot .top ul>li a{
+    color: #6c6c6c;
+    margin: 0px 4px;
+    line-height: 27px;
+}
+.foot .top ul>li a:hover{
+    color: #f40;
+}
+.foot .top ul>li span{
+    margin: 0px 3px;
+    color: #ddd;
+}
+.foot .bottom{
+    padding-top: 8px;
+}
+.foot .bottom .bottom_top p{
+    padding-bottom: 8px;
+}
+.foot .bottom .bottom_top p span{
+    line-height: 18px;
+}
+.foot .bottom .bottom_top .col{
+    cursor: pointer;
+    color: #3c3c3c;
+}
+.foot .bottom .bottom_top .col:hover{
+    color: #f40;
+}
+.foot .bottom i{
+    color: #ddd;
+    margin: 0 3px;
+}
+em{
+    font-style: normal;
+    color: #9c9c9c;
+}
+.foot .bottom .first span{
+    cursor: pointer;
+    margin: 0px 4px;
+}
+.foot .bottom .first span:hover{
+    color:#f40 ;
+}
+.foot .bottom .second,.foot .bottom .third,.foot .bottom .forth{
+    color: #9c9c9c;
+}
+.foot .bottom .forth .picture{
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    vertical-align: middle;
+    background: url(../images/foot.jpg) -861px 0px no-repeat;
+}
+.foot .bottom .IMG .pic{
+    height: 40px;
+    cursor: pointer;
+    display: inline-block;
+    margin-right: 15px;
+    background: url(../images/foot.jpg) 0 0 no-repeat;
+}
+.foot .bottom .IMG .img1{
+    width: 36px;
+    background-image: url(../images/footx.gif);
+}
+.foot .bottom .IMG .img2{
+    background-position: 0 0;
+    width: 30px;
+}
+.foot .bottom .IMG .img3{
+    background-position: -40px 0;
+    width: 33px;
+}
+.foot .bottom .IMG .img4{
+    background-position:-80px 0 ;
+    width: 50px;
+}
+.foot .bottom .IMG .img5{
+    background-position:-140px 0 ;
+    width: 83px
+}
+.foot .bottom .IMG .img6{
+    background-image: url(../images/foot2.png_250x250);
+    background-position: 0 -18px;
+    width: 250px;
+}
+.foot .bottom .IMG .img7{
+    background-position:-650px 0 ;
+    width: 105px;
+}
+.foot .bottom .IMG .img8{
+    background-position: -345px 0;
+    width: 82px;
+}
+.foot .bottom .IMG .img9{
+    background-position:-761px 0 ;
+    width: 97px;
+}
+.foot .bottom .IMG .img10{
+    background-position:-884px 0 ;
+    width: 249px;
+}
+.foot .bottom .IMG .img11{
+    background-image: url(../images/footlast.jpg);
+    background-position:0 0 ;
+    width: 249px;
+}
